@@ -1,4 +1,4 @@
-variable "count" {
+variable "replicas_count" {
   type = string
 }
 
@@ -26,10 +26,15 @@ variable "use_public_ip" {
     type = bool
 }
 
-variable "name" {
+variable "root_volume_size" {
     type = string
 }
 
-variable "root_volume_size" {
+variable "instance_tags" {
+    type = map(string)
+    default = {}
+}
+
+variable "user_data" {
     type = string
 }
